@@ -4,6 +4,7 @@ function Check() {
   const [inputStr, setInputStr] = useState("");
   const [showPicker, setShowPicker] = useState(false);
 
+
   const onEmojiClick = (emojiObject,event) => {
     setInputStr((prevInput) => prevInput + emojiObject.emoji);
     setShowPicker(false);
