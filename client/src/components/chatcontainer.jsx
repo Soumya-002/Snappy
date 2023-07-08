@@ -24,7 +24,7 @@ const ChatContainer = ({currentChat,currentUser,socket}) => {
     }
     }
     fetchdata();
-  },[currentChat]);
+  });
 
 
   const handleSendMsg = async(msg) => {

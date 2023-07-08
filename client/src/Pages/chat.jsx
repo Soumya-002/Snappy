@@ -47,7 +47,7 @@ const Chat = () => {
         }
     }
     check();
-   },[currentUser]);
+   });
 
    const handleChatChange = (chat) => {
     setcurrentChat(chat);
