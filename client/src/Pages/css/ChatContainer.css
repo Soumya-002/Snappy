@@ -1,0 +1,136 @@
+.chat-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+.user-details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 2rem;
+    gap: 1rem;
+}
+.chat-image img{
+    height: 2.5rem;
+}
+.logout{
+  border-radius: 0.5rem;
+}
+.logout svg {
+    font-size: 1rem;
+    color: #ebe7ff;
+  }
+
+  .chat-messages{
+    height: 77vh;
+    background-color: #0d0d30;
+    overflow: scroll;
+    scrollbar-width: thin;
+  }
+  .parent-chat{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 5% 95%;
+    background-color: #080420;
+    padding: 0 2rem;
+  }
+.input-container{
+    width: 100%;
+    display: flex;
+    border-radius: 2rem;
+    align-items: center;
+    gap: 2rem;
+}  
+.input-container input {
+    width: 90%;
+    height: 60%;
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding-left: 1rem;
+    font-size: 1.2rem;
+
+}
+.input-container input::selection {
+    background-color: #2300be;
+  }
+
+.submit{
+        padding: 0.3rem 1rem;
+        border-radius: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #9a86f3;
+        border: none;
+  }
+  .button-container {
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 1rem;
+  }
+  
+  .button-container .emoji {
+    position: relative;
+  }
+  
+  .button-container .emoji svg {
+    font-size: 1.5rem;
+    color: #ffff00c8;
+    cursor: pointer;
+  }
+  
+  .button-container .emoji .EmojiPickerReact {
+    position: absolute;
+    top: -28rem;
+    /* background-color: #080420; */
+    box-shadow: 0 5px 10px #9a86f3;
+    border-color: #9a86f3;
+    z-index: 9999;
+    height: 390px;
+    width: 290px;
+    scrollbar-width: thin;
+  }
+
+  .EmojiPickerReact .epr-body{
+    scrollbar-width: thin;
+  }
+  aside{
+    height: 0px;
+width: 0px;
+  }
+  .EmojiPickerReact .epr-main{
+    height: 417px;
+width: 310px;
+  }
+.message{
+  display: flex;
+  align-items: center;
+  padding: 0.2rem;
+}
+.message .content {
+  max-width: 40%;
+  overflow-wrap: break-word;
+  padding: 0.7rem;
+  color: white;
+  border-radius: 0.8rem;
+  box-shadow: rgba(215, 197, 197, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+ 
+}
+.received {
+  justify-content: flex-start;
+}
+.received .content{
+  background-color: rgb(246, 81, 21);
+}
+.sended{
+  justify-content: flex-end;
+ }
+ .sended .content{
+  background-color: rgba(18, 45, 199, 0.678);
+}
