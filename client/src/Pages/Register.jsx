@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from "react";
+import { React, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "./css/Register.css";
 import { ToastContainer, toast } from "react-toastify";
@@ -49,7 +49,7 @@ const Signup = () => {
   };
 
   const handleValidation = (e) => {
-    const { username, email, password, confirmpassword } = values;
+    const { username, password, confirmpassword } = values;
 
     if (password !== confirmpassword) {
       toast.error("Password and Confirm Password must be same", toastOptions);

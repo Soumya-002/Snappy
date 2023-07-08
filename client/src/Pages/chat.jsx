@@ -26,7 +26,7 @@ const Chat = () => {
         }
     }
     fetchData();
-   },[])
+   })
 
    useEffect(() => {
     if(currentUser){

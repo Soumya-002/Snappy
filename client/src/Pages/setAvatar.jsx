@@ -32,7 +32,7 @@ const SetAvatar = () => {
     }
   }
   check();
-},[]);
+});
 
 const setProfilepic = async () => {
   if (selectedAvatar === undefined) {
@@ -79,7 +79,7 @@ const setProfilepic = async () => {
     };
   
     fetchData();
-  }, []);
+  });
   
 
   return (
