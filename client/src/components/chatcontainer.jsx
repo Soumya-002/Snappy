@@ -24,7 +24,8 @@ const ChatContainer = ({currentChat,currentUser,socket}) => {
     }
     }
     fetchdata();
-  });
+  },// eslint-disable-next-line
+  [currentChat]);
 
 
   const handleSendMsg = async(msg) => {

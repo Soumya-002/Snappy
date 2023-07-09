@@ -32,7 +32,8 @@ const SetAvatar = () => {
     }
   }
   check();
-});
+},// eslint-disable-next-line
+[]);
 
 const setProfilepic = async () => {
   if (selectedAvatar === undefined) {
@@ -78,8 +79,10 @@ const setProfilepic = async () => {
       setLoading(false);
     };
   
+    // eslint-disable-next-line
     fetchData();
-  });
+  },// eslint-disable-next-line
+   []);
   
 
   return (

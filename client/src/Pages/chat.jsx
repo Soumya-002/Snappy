@@ -26,7 +26,8 @@ const Chat = () => {
         }
     }
     fetchData();
-   })
+   },// eslint-disable-next-line
+   [])
 
    useEffect(() => {
     if(currentUser){
@@ -47,7 +48,8 @@ const Chat = () => {
         }
     }
     check();
-   });
+   },// eslint-disable-next-line
+   [currentUser]);
 
    const handleChatChange = (chat) => {
     setcurrentChat(chat);
