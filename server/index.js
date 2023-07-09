@@ -30,7 +30,7 @@ console.log(`server is running on ${PORT}`));
 
 const io = socket(server,{
     cors:{
-        origin:"http://localhost:3000",
+        origin:"https://silly-griffin-b4ea44.netlify.app/",
         Credentials:true,
     }
 })
