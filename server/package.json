@@ -19,5 +19,7 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "proxy": "https://snappy-backend-c12u.onrender.com"
+
 }

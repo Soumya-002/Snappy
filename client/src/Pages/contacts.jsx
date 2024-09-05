@@ -3,24 +3,28 @@ import "react-toastify/dist/ReactToastify.css";
 import { Container } from "reactstrap";
 import "./css/contact.css";
 
-const Contact = ({ contacts,changeChat }) => {
-  const [currentUserName, setcurrentUserName] = useState(undefined);
-  const [currentUserImage, setcurrentUserImage] = useState(undefined);
-  const [currentSelected, setcurrentSelected] = useState(undefined);
+const Contact = ({ contacts, changeChat }) => {
+  const [currentUserName, setCurrentUserName] = useState(undefined);
+  const [currentUserImage, setCurrentUserImage] = useState(undefined);
+  const [currentSelected, setCurrentSelected] = useState(undefined);
+
   useEffect(() => {
-    const checkUser = async() => {
-      const DATA = await JSON.parse(
-        localStorage.getItem("chat-app-user")
-      );
-      setcurrentUserImage(DATA.avatarImage);
-      setcurrentUserName(DATA.username);
-    }
+    const checkUser = async () => {
+      const storedUser = localStorage.getItem("chat-app-user");
+      if (storedUser) {
+        const DATA = JSON.parse(storedUser);
+        setCurrentUserImage(DATA.avatarImage);
+        setCurrentUserName(DATA.username);
+      } else {
+        console.error("No user found in localStorage");
+      }
+    };
+
     checkUser();
-      
-}, []);
+  }, []);
 
   const changeCurrentContact = (index, contact) => {
-    setcurrentSelected(index);
+    setCurrentSelected(index);
     changeChat(contact);
   };
 
@@ -29,7 +33,6 @@ const Contact = ({ contacts,changeChat }) => {
       {currentUserName && (
         <Container className="parent">
           <div className="brand">
-            <img src="" alt="" />
             <h1>Snappy</h1>
           </div>
           <div className="contacts">
@@ -41,7 +44,7 @@ const Contact = ({ contacts,changeChat }) => {
                     index === currentSelected ? "selected" : ""
                   }`}
                   onClick={() => {
-                    changeCurrentContact(index,contact)
+                    changeCurrentContact(index, contact);
                   }}
                 >
                   <div className="avatars">
@@ -58,12 +61,12 @@ const Contact = ({ contacts,changeChat }) => {
             })}
           </div>
           <div className="current-user">
-          <div className="avatars">
-            <img
-              src={`data:image/svg+xml;base64,${currentUserImage}`}
-              alt="avatar"
-              className="hello"
-            />
+            <div className="avatars">
+              <img
+                src={`data:image/svg+xml;base64,${currentUserImage}`}
+                alt="avatar"
+                className="hello"
+              />
             </div>
             <div className="username">
               <h3>{currentUserName}</h3>

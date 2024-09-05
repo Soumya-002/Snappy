@@ -50,6 +50,3 @@ socket.on("send-msg",(data) => {
     }
 })
 });
-
-
-

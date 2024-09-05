@@ -66,3 +66,18 @@
         color: white;
       }
     
+      @media (max-width: 768px) {
+        .brand {
+          justify-content: flex-start;
+      }
+      .brand h1 {
+        font-size: 1.2rem;
+      }
+      .current-user{
+        flex-direction: column;
+      }
+      .contact{
+        display: block;
+        min-height: 6rem;;
+      }
+    }
